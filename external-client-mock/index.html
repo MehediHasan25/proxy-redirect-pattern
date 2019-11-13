@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>APEX</title>
+</head>
+
+<body>
+
+  <input type="text" name="input1" id="input1">
+  <input type="text" name="input2" id="input2">
+  <button onclick="redirect()">Pass</button>
+
+  <script>
+    function redirect() {
+      let in1 = document.getElementById("input1").value;
+      let in2 = document.getElementById("input2").value;
+      let reactComponent = "dashboard";
+
+      let url = `http://localhost:3000/${reactComponent}/${in1}/${in2}`;
+
+      window.location.href = url;
+    }
+  </script>
+</body>
+
+</html>
